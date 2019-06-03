@@ -31,6 +31,11 @@ mod gg {
         }
     }
 }
+
+// 使用模块命名的方式
+use self::libs::network as kp;
+use crate::libs::network as pl;
+
 // 调用测试 核心的使用
 fn main(){
     let gm = Gm{name:String::from("mll"),age:31};
@@ -59,6 +64,8 @@ fn main(){
     network::connect(); // 调用模块命名
     network::disconnect();
     network::ip::getip();   //模块的引用 引入新的对象
+    kp::disconnect(); // 引入模块重命名的方式调用
+    pl::connect();  // 引入模块重命名的方式调用
 }
 
 --------libs mod.rs
