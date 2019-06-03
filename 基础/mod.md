@@ -67,6 +67,9 @@ pub mod network;
 
 ----libs/network/mod.rs
 pub mod ip; //  使用第三方的=库的参数设置
+pub fn ggip(){
+    self::network::ip::getip();  // self 是相对路径 super 相对路径
+}
 
 pub fn connect(){
     println!("This  network {}","mll"); // 使用模块调用
