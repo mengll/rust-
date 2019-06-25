@@ -46,3 +46,39 @@ fn main(){
     Gk::method_four();
 }
 ```
+
+### 结构函数方法的接口的调用
+```
+#[derive(Debug)]
+struct Foo;
+
+trait Bar{
+  fn baz(&self);
+}
+
+impl Bar for Foo {
+  fn baz(&self){
+    println!("{:?}",self)
+  }
+}
+
+// 泛型，指定实现了相关的接口
+fn static_dispatch<T>(t:&T) where T:Bar{
+  t.baz();
+}
+
+// 类比golang 的interface{}接口的处理
+fn dynamic_dispatch(t:&Bar){
+  t.baz();
+}
+
+fn main(){
+  let foo = Foo;
+  static_dispatch(&foo);
+  dynamic_dispatch(&foo); // 传递当前的对象实现相关的接口
+}
+
+```
+
+
+
