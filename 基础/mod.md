@@ -92,5 +92,30 @@ pub fn disconnect(){
     pub fn getip(){
         println!("Thisisip")
     }
+    
+---- mod 的使用复习
+mod sound {
+    pub fn guitar(){
+        println!("{}","This is mod function");
+    }
+
+    pub fn show(){
+        println!("{}","test super request");
+    }
+
+    pub mod woodwind{
+        pub fn wood(){
+            println!("This is wood function");
+            super::show(); // 调用父类的方法的操作
+        }
+    }
+}
+
+fn main(){
+    println!("{}","This is main function");
+    sound::guitar();
+    sound::woodwind::wood();
+}
+
 
 ```
