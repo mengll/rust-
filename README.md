@@ -9,3 +9,10 @@ rust 学习笔记
 数组类型，如果内部的元素类型是Copy类型 这个数组也是copy 类型=
 struct 和  enum 类型不会自动实现 Copy trait 只有当内部成员是Copy类型 才允许实现Copy的类型
 ``` 
+
+### 配置代理
+设置环境变量 RUSTUP_DIST_SERVER(用于更新 toolchain)
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+以及 RUSTUP_UPDATE_ROOT(用于更新 rustup)
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+
