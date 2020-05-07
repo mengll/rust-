@@ -16,3 +16,7 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 以及 RUSTUP_UPDATE_ROOT(用于更新 rustup)
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
+### ziyuan 
+https://doc.rust-lang.org/edition-guide/rust-2018/ownership-and-lifetimes/the-anonymous-lifetime.html
+
+https://stevenbai.top/rust/my_note/
