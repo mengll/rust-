@@ -8,6 +8,10 @@ rust 学习笔记
 常见的 数字类型，bool类型 共享借用指针& 都是具有copy 属性的的类型 而box vec 可借用指针&mut等类型不具备Copy属性的类型 
 数组类型，如果内部的元素类型是Copy类型 这个数组也是copy 类型=
 struct 和  enum 类型不会自动实现 Copy trait 只有当内部成员是Copy类型 才允许实现Copy的类型
+
+包引入其他的应用包
+pub use crate::db::afmysql::mysql; 本项目下
+
 ``` 
 
 ### 配置代理
