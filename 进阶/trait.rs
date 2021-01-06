@@ -52,3 +52,39 @@ fn main(){
     let cc =  &mut new_struct();
     cc.kill("fj".to_string());
 }
+
+
+// 数据关联类型
+trait Run {
+    type Gs;
+    fn gorun(&self,_:Self::Gs);
+    fn runrun(&self){
+        println!("I can run ")
+    }
+}
+
+
+struct G<'a> {
+    name:&'a str
+}
+
+impl <'a> Run for G<'a> {
+    type Gs = Gk<'a>; 
+    fn gorun(&self,a:Self::Gs){
+        println!("{:?}",a)
+    }
+
+    fn runrun(&self){
+        println!("riernas");
+    }
+}
+
+// 调用
+    let gg = G{name:"dand"};
+    let gk = Gk{muid:"fk",name:"fucker".to_string()};
+    gg.gorun(gk);
+    gg.runrun();
+
+
+
+
