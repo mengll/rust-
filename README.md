@@ -12,6 +12,10 @@ struct 和  enum 类型不会自动实现 Copy trait 只有当内部成员是Cop
 包引入其他的应用包
 pub use crate::db::afmysql::mysql; 本项目下
 
+闭包与匿名函数区别
+ 闭包是获取上下文变量的匿名函数 Fn|| ->i32 {x+1}
+ 匿名函数 |a|->i32 { a+1}
+
 设置为开发
 rustup default nightly
 ``` 
