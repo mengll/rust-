@@ -20,6 +20,14 @@ pub use crate::db::afmysql::mysql; 本项目下
 rustup default nightly
 ``` 
 
+```
+借用相关
+在一个作用域下，同一时刻，一个值只能有一个所有者
+堆变量的生命周期不具备任意长度的灵活性，因为堆上内存的生死存亡，跟栈上的所有者牢牢绑定，而栈上内存的生命周期，又跟栈的生命周期相关， 所以我们核心只需惯性调用栈的
+生命周期
+
+```
+
 ### 配置代理
 设置环境变量 RUSTUP_DIST_SERVER(用于更新 toolchain)
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
